@@ -1,0 +1,132 @@
+:root {
+    --primary: hsl(213deg 85% 97%);
+    --secondary: hsl(233deg 36% 38%);
+    --background: hsl(218deg 50% 91%);
+    --white: hsl(0deg 0% 100%);
+    --text: hsl(0deg 0% 30%);
+}
+
+body {
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+}
+
+button {
+    cursor: pointer;
+}
+
+.screen-1 {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    border-radius: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.screen-1 .logo {
+    display: flex;
+    justify-content: center;
+}
+
+.screen-1 h1 {
+    font-size: 2em; /* Increased font size */
+    color: var(--secondary);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.input-container {
+    width: 90%;
+}
+
+.input-container label {
+    font-size: 1.1em;
+    color: var(--secondary);
+    margin-bottom: 0.3em;
+}
+
+.sec-2 {
+    background: var(--white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    border-radius: 20px;
+}
+
+.input-container input {
+    outline: none;
+    border: none;
+    padding: 0.8em;
+    border-radius: 10px;
+    font-size: 1em;
+    flex-grow: 1; /* Allows input to take full width */
+    transition: border 0.3s;
+}
+
+.input-container input:focus {
+    border: 2px solid var(--secondary);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-container input::placeholder {
+    color: var(--text);
+    font-size: 0.9em;
+}
+
+.sec-2 ion-icon {
+    color: var(--text);
+}
+
+.screen-1 .login {
+    padding: 1em;
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    width: 90%;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screen-1 .login:hover {
+    background: hsl(233deg 50% 40%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.screen-1 .footer {
+    display: flex;
+    font-size: 0.9em;
+    color: hsl(0deg 0% 37%);
+    gap: 14em;
+    padding-bottom: 1em;
+}
+
+.screen-1 .footer span {
+    cursor: pointer;
+}

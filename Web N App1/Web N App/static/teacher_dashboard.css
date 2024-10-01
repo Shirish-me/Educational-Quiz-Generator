@@ -1,0 +1,80 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #4A90E2, #9013FE); /* Vibrant gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center; /* Align items vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Centering container for dashboard */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for a modern look */
+    border-radius: 12px; /* Rounded corners */
+    padding: 40px; /* Increased padding */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    text-align: center; /* Center text */
+    max-width: 400px; /* Restrict max width */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.container:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Logo styles */
+.logo svg {
+    width: 120px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 20px; /* Space below logo */
+}
+
+/* Heading styles */
+h1 {
+    color: #333; /* Darker text for contrast */
+    font-size: 2.5em; /* Larger font size */
+    margin-bottom: 20px; /* Space below heading */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    margin: 10px 0; /* Margin for vertical spacing */
+    padding: 15px 30px; /* Increased padding */
+    color: #fff;
+    border-radius: 25px; /* More rounded buttons */
+    text-decoration: none;
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s, transform 0.2s; /* Transition for hover effects */
+    font-size: 1.1em; /* Slightly larger text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for buttons */
+    width: 100%; /* Full width for consistent button size */
+    max-width: 350px; /* Maximum width for buttons */
+    background-color: #28a745; /* Green color for all buttons */
+    position: relative; /* Position for pseudo-elements */
+    overflow: hidden; /* To prevent the shadow overflow */
+}
+
+.btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+    h1 {
+        font-size: 2em; /* Adjust heading size for smaller screens */
+    }
+    .btn {
+        padding: 12px 20px; /* Adjust button padding for smaller screens */
+        font-size: 1em; /* Smaller font size for buttons */
+    }
+}

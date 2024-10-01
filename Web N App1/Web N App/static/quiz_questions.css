@@ -1,0 +1,128 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #122442, #8dafdf); /* Light gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    max-width: 600px; /* Limit container width */
+    width: 90%; /* Responsive width */
+    padding: 30px;
+    background: linear-gradient(to top right, #ffffff, #f9f9f9); /* Subtle gradient for container */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header styles */
+h1 {
+    text-align: center; /* Centering title */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px;
+    font-size: 2rem; /* Consistent font size */
+}
+
+/* Question box styles */
+.question {
+    margin-bottom: 20px; /* Space between questions */
+    padding: 15px; /* Padding for question box */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
+    background: linear-gradient(to bottom, #f1f3f5, #e9ecef); /* Gradient for question boxes */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.question:hover {
+    background: linear-gradient(to bottom, #e9ecef, #f1f3f5); /* Change gradient on hover */
+}
+
+/* Text styles */
+p {
+    margin: 0;
+    font-size: 1.1rem; /* Responsive font size */
+    color: #444; /* Darker grey text color */
+}
+
+/* Input field styles */
+.answer-input {
+    width: 100%; /* Full width */
+    padding: 12px; /* Padding */
+    margin-top: 10px; /* Space above */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Consistent font size */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition for focus */
+}
+
+/* Focus styles for input fields */
+.answer-input:focus {
+    border-color: #007BFF; /* Highlight border on focus */
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light shadow */
+}
+
+/* Button styles */
+.submit-button {
+    background: linear-gradient(to right, #007BFF, #0056b3); /* Gradient for button */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 12px; /* Padding for button */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 1.2rem; /* Larger font size */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover */
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Space above */
+}
+
+/* Button hover effects */
+.submit-button:hover {
+    background: linear-gradient(to right, #0056b3, #004494); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem; /* Smaller font size on small screens */
+    }
+    
+    .question {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .answer-input {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .submit-button {
+        font-size: 1rem; /* Smaller font size for button */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem; /* Further reduce font size on very small screens */
+    }
+
+    .container {
+        padding: 20px; /* Reduce padding on very small screens */
+    }
+
+    .question {
+        padding: 8px; /* Further adjust padding for smaller screens */
+    }
+
+    .answer-input {
+        padding: 8px; /* Further adjust padding for smaller screens */
+    }
+
+    .submit-button {
+        font-size: 0.9rem; /* Smaller font size for button */
+    }
+}

@@ -1,0 +1,83 @@
+/* Define color variables */
+:root {
+    --primary: hsl(213deg 85% 97%);
+    --secondary: hsl(233deg 36% 38%);
+    --background: hsl(218deg 50% 91%);
+    --white: hsl(0deg 0% 100%);
+    --text: hsl(0deg 0% 30%);
+}
+
+/* General styling */
+body {
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+/* Styling for the student dashboard screen */
+.screen-1 {
+    background: var(--primary);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.001em;
+    border-radius: 30px;
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    align-items: center;
+    text-align: center;
+}
+
+
+
+/* Dashboard heading */
+.screen-1 h1 {
+    color: var(--secondary);
+    font-size: 2em;
+}
+
+/* Button styling (reuse of login button style) */
+.screen-1 .login {
+    padding: 1em 2em;
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Logo styling */
+.logo {
+    margin-bottom: 0.em; /* Adjusted margin to reduce distance */
+}
+
+
+
+
+
+
+/* Button styling */
+.screen-1 .btn {
+    padding: 1em 2em;
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    height: auto;
+    width: 70%;
+    margin-bottom: 1em; /* Add some spacing between buttons */
+    text-align: center;
+    display: inline-block; /* Make sure it's inline-block to apply the width */
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate MCQs & Questions</title>
+    <link rel="stylesheet" href="/static/generate_mcq.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>Generate MCQs & Questions</h1>
+            <form action="{{ url_for('generate_mcq_view') }}" method="POST">
+                <!-- Input Options Section -->
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <label for="upload_pdf">
+                            <input type="radio" name="upload_option" id="upload_pdf" value="pdf"> Upload PDF
+                        </label>
+                        <div id="pdf_input" class="file-input hidden">
+                            <input type="file" name="pdf_file" accept=".pdf">
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <label for="upload_docx">
+                            <input type="radio" name="upload_option" id="upload_docx" value="docx"> Upload DOCX
+                        </label>
+                        <div id="docx_input" class="file-input hidden">
+                            <input type="file" name="docx_file" accept=".docx">
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <label for="paste_text">
+                            <input type="radio" name="upload_option" id="paste_text" value="text"> Paste Text
+                        </label>
+                        <div id="text_input" class="text-area hidden">
+                            <textarea name="input_text" rows="5" placeholder="Paste your text here"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- Type of Questions Section -->
+                <div class="grid-container question-type">
+                    <div class="grid-item question-type-item">
+                        <label for="question_type">Type of Question:</label>
+                        <div class="question-options">
+                            <label>
+                                <input type="radio" name="question_type" value="option" required> Option
+                            </label>
+                            <label>
+                                <input type="radio" name="question_type" value="short_answer" required> Short Answer
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Questions and Score Section -->
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <label for="subject">Subject:</label>
+                        <input type="text" name="subject" id="subject" placeholder="Enter Subject" required>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <label for="num_questions">Number of Questions:</label>
+                        <input type="number" name="num_questions" id="num_questions" min="1" required>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <label for="score_per_question">Score per Question:</label>
+                        <input type="number" name="score_per_question" id="score_per_question" min="1" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Generate MCQs</button>
+            </form>
+           
+        </div>
+    </div>
+    <!-- JavaScript to handle display toggles -->
+    <script>
+        const uploadOptions = document.querySelectorAll('input[name="upload_option"]');
+        const pdfInput = document.getElementById('pdf_input');
+        const docxInput = document.getElementById('docx_input');
+        const textInput = document.getElementById('text_input');
+
+        uploadOptions.forEach(option => {
+            option.addEventListener('change', () => {
+                pdfInput.classList.add('hidden');
+                docxInput.classList.add('hidden');
+                textInput.classList.add('hidden');
+
+                if (option.value === 'pdf') {
+                    pdfInput.classList.remove('hidden');
+                } else if (option.value === 'docx') {
+                    docxInput.classList.remove('hidden');
+                } else if (option.value === 'text') {
+                    textInput.classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

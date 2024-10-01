@@ -1,0 +1,106 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #FF6F61, #6FA3EF); /* Warm coral to soft blue gradient */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Container styling */
+.container {
+    max-width: 600px;
+    width: 90%; /* Responsive width */
+    margin: 20px auto;
+    padding: 40px; /* Increased padding */
+    background-color: #ffffff;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+    text-align: center;
+    animation: fadeIn 0.5s; /* Animation effect */
+}
+
+/* Animation for fade in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Heading styles */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Larger font size for title */
+}
+
+/* Input styles */
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF; /* Focus effect */
+    outline: none; /* Remove default outline */
+}
+
+/* Questions styling */
+.question-pair {
+    margin-bottom: 20px; /* Space between question pairs */
+}
+
+/* Button styling */
+button.add-question {
+    background-color: #007BFF; /* Blue button */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s; /* Transition for effects */
+}
+
+button.add-question:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Submit button styling */
+.submit-button {
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s; /* Transition for effects */
+}
+
+.submit-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust heading size for smaller screens */
+    }
+
+    input[type="text"] {
+        padding: 10px; /* Adjust padding for inputs */
+    }
+}

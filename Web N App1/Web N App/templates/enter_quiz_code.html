@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Quiz Code</title>
+    <style>
+        /* Define color variables */
+        :root {
+            --primary: hsl(213deg 85% 97%);
+            --secondary: hsl(233deg 36% 38%);
+            --background: hsl(218deg 50% 91%);
+            --white: hsl(0deg 0% 100%);
+            --text: hsl(0deg 0% 30%);
+        }
+
+        /* General styling */
+        body {
+            user-select: none;
+            overflow-y: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--background);
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+        button, a {
+            cursor: pointer;
+        }
+
+        /* Styling for the student dashboard screen */
+        .screen-1 {
+            background: var(--primary);
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            border-radius: 30px;
+            box-shadow: 0 0 2em hsl(231deg 62% 94%);
+            align-items: center;
+            text-align: center;
+            width: 350px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .screen-1 .logo {
+            margin-top: -3em;
+        }
+
+        /* Dashboard heading */
+        .screen-1 h1 {
+            color: var(--secondary);
+            font-size: 2em;
+        }
+
+        /* Input fields styling */
+        .email {
+            background: var(--white);
+            /* box-shadow: 0 0  hsl(231deg 62% 94%); */
+            padding: 1em;
+            display: flex;
+            align-items: center;
+            /* padding-left: 32px; */
+            flex-direction: column;
+            /* justify-content: center; */
+            /* gap: 0.5em; */
+            border-radius: 20px;
+            color: var(--text);
+            width: 100%;
+        }
+
+        .email label {
+            font-size: 1em;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .sec-2 {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+
+        input[type="text"] {
+            outline: none;
+            border: none;
+            background: none;
+            padding: 0.5em;
+            font-size: 1em;
+            color: var(--text);
+            width: 100%;
+        }
+
+        input[type="text"]::placeholder {
+            color: var(--text);
+            font-size: 0.9em;
+        }
+
+        /* Ion Icons Styling */
+        ion-icon {
+            color: var(--text);
+            font-size: 1.2em;
+            margin-bottom: -0.2em;
+        }
+
+        /* Button styling (reuse of login button style) */
+        .screen-1 .login {
+            padding: 1em 2em;
+            background: var(--secondary);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+
+        /* Optional: Hover effect for button */
+        .screen-1 .login:hover {
+            background: hsl(233deg 36% 45%);
+        }
+
+        /* Additional Styling */
+        button:focus, input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 0 0.5em hsl(231deg 62% 84%);
+            border-radius: 10px;
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="screen-1">
+        <h1>Enter Quiz Code</h1>
+        <form class="container" action="quiz.html" method="POST">
+            <div class="email">
+                <label for="quiz_code">Quiz Code</label>
+                <div class="sec-2">
+                    <ion-icon name="key-outline"></ion-icon>
+                    <input type="text" id="quiz_code" name="quiz_code" placeholder="Enter Quiz Code" required>
+                </div>
+            </div>
+            <button type="submit" class="login">Start Quiz</button>
+        </form>
+    </div>
+</body>
+</html>

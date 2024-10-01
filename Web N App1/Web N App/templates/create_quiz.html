@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz</title>
+    <link rel="stylesheet" href="/static/quiz.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Create Your Quiz</h1>
+        <form method="POST">
+            <label for="quiz_name">Quiz Name:</label>
+            <input type="text" name="quiz_name" required placeholder="Enter quiz name">
+
+            <div id="questions">
+                <h3>Questions:</h3>
+                <div class="question-pair">
+                    <input type="text" name="questions[]" placeholder="Question 1" required>
+                    <input type="text" name="answers[]" placeholder="Answer 1" required>
+                </div>
+            </div>
+            <button type="button" class="add-question" onclick="addQuestion()">+ Add Question</button>
+            <input type="submit" value="Create Quiz" class="submit-button">
+        </form>
+    </div>
+
+    <script>
+        function addQuestion() {
+            const questionsDiv = document.getElementById('questions');
+            const questionIndex = questionsDiv.childElementCount + 1;
+            const newQuestion = `
+                <div class="question-pair">
+                    <input type="text" name="questions[]" placeholder="Question ${questionIndex}" required>
+                    <input type="text" name="answers[]" placeholder="Answer ${questionIndex}" required>
+                </div>`;
+            questionsDiv.insertAdjacentHTML('beforeend', newQuestion);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+/* Define color variables */
+:root {
+    --primary: hsl(213deg 85% 97%);
+    --secondary: hsl(233deg 36% 38%);
+    --background: hsl(218deg 50% 91%);
+    --white: hsl(0deg 0% 100%);
+    --text: hsl(0deg 0% 30%);
+}
+
+/* General styling */
+body {
+    user-select: none;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+button, .btn {
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    width: 20%;
+    transition: background 0.3s ease;
+    display: block;
+    margin: 2em auto;
+    padding: 0.90em 0;
+    text-align: center;
+}
+
+button:hover, .btn:hover {
+    background: hsl(233deg 36% 45%);
+}
+
+/* Styling for the main container */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling for the form container */
+.container {
+    background: var(--primary);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    border-radius: 30px;
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    width: 90%;
+    max-width: 1200px; /* Adjust as needed */
+    text-align: center;
+}
+
+.container h1 {
+    color: var(--secondary);
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+/* Grid container styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 2em;
+    justify-content: center; /* Center the grid items horizontally */
+    align-items: center; /* Center the grid items vertically */
+    margin-bottom: 2em;
+}
+
+.grid-container.question-type {
+    grid-template-columns: 1fr; /* Single column for question type */
+}
+
+/* Grid item styling */
+.grid-item {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Labels and Inputs styling */
+label {
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea {
+    padding: 0.75em;
+    border-radius: 30px;
+    border: 1px solid hsl(218deg 30% 75%);
+    width: 100%;
+    font-size: 1em;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus,
+textarea:focus {
+    border-color: var(--secondary);
+}
+
+/* Textarea styling */
+textarea {
+    resize: none;
+}
+
+/* Hidden input fields initially */
+.hidden {
+    display: none;
+}
+
+/* Additional Styling */
+.file-input {
+    margin-top: 1em;
+}
+
+/* Question Type Options Styling */
+.question-type-item {
+    text-align: center;
+}
+
+.question-options {
+    margin-top: 1em; /* Space above the question type options */
+    display: flex;
+    justify-content: center; /* Center options horizontally */
+    gap: 2em; /* Space between the options */
+}
+
+.question-options label {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: var(--secondary);
+}
+    

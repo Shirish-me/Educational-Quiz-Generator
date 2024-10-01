@@ -1,0 +1,149 @@
+/* Define color variables */
+:root {
+    --primary: hsl(213deg 85% 97%);
+    --secondary: hsl(233deg 36% 38%);
+    --background: linear-gradient(135deg, hsl(218deg 50% 91%), hsl(233deg 36% 48%));
+    --button-gradient: linear-gradient(135deg, hsl(233deg 36% 38%), hsl(233deg 36% 58%));
+    --white: hsl(0deg 0% 100%);
+    --text: hsl(0deg 0% 30%);
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Reduced shadow size */
+}
+
+/* General styling */
+body {
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* Button Styling */
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: all 0.3s ease;
+}
+
+/* Screen Styling */
+.screen-1 {
+    background: var(--white);
+    padding: 1.5em; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em; /* Reduced gap */
+    border-radius: 20px; /* Smaller border radius */
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 300px; /* Reduced max-width */
+    text-align: center;
+}
+
+/* Centering logo */
+.screen-1 .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.8em;
+    width: 100%;
+}
+
+.screen-1 .logo svg {
+    max-width: 40%; /* Reduced logo size */
+    height: auto;
+}
+
+/* Input section styling */
+.input-section {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    padding: 1em; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em; /* Reduced gap */
+    width: 100%;
+    border-radius: 15px; /* Smaller border radius */
+}
+
+.input-section label {
+    font-size: 0.85em; /* Smaller label font size */
+    color: var(--text);
+}
+
+.input-section .sec-2 {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    padding: 0.6em 0.8em; /* Reduced padding */
+    border-radius: 8px; /* Smaller border radius */
+    border: 1px solid hsl(0deg 0% 85%);
+    transition: border 0.3s;
+}
+
+.input-section input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    flex-grow: 1;
+    font-size: 0.85em; /* Smaller font size */
+    color: var(--text);
+}
+
+.input-section input::placeholder {
+    color: hsl(0deg 0% 60%);
+}
+
+.input-section ion-icon {
+    font-size: 1.2em; /* Reduced icon size */
+    color: var(--secondary);
+    margin-right: 8px;
+}
+
+/* Hover Effect for Input */
+.input-section .sec-2:hover {
+    border-color: var(--secondary);
+}
+
+/* Sign up button styling */
+.screen-1 .login {
+    padding: 0.8em; /* Reduced button padding */
+    background: var(--button-gradient);
+    color: var(--white);
+    width: 100%;
+    border-radius: 20px; /* Smaller border radius */
+    font-weight: 600;
+    transition: background 0.4s ease-in-out;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Smaller shadow */
+    font-size: 0.85em; /* Smaller button text size */
+}
+
+.screen-1 .login:hover {
+    background: linear-gradient(135deg, hsl(233deg 36% 58%), hsl(233deg 36% 78%));
+    transform: translateY(-2px); /* Slightly reduced lift effect */
+}
+
+/* Footer styling */
+.screen-1 .footer {
+    display: flex;
+    font-size: 0.75em; /* Reduced footer text size */
+    color: hsl(0deg 0% 50%);
+    padding-top: 1em;
+}
+
+.screen-1 .footer span {
+    cursor: pointer;
+    color: var(--secondary);
+    margin-left: 5px;
+    transition: color 0.3s;
+}
+
+.screen-1 .footer span:hover {
+    color: hsl(233deg 36% 60%);
+}

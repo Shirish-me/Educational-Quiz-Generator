@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/static/signup.css">
+</head>
+<body>
+    <div class="screen-1">
+        <div class="logo">
+            <!-- Logo SVG here -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="300" height="300" viewBox="0 0 640 480" xml:space="preserve">
+                <!-- Replace this comment with your SVG content -->
+                <g transform="matrix(3.31 0 0 3.31 320.4 240.4)">
+                    <circle style="stroke: rgb(0,0,0); stroke-width: 0; fill: rgb(61,71,133);" cx="0" cy="0" r="40"></circle>
+                </g>
+                <g transform="matrix(0.98 0 0 0.98 268.7 213.7)">
+                    <circle style="stroke: rgb(0,0,0); stroke-width: 0; fill: rgb(255,255,255);" cx="0" cy="0" r="40"></circle>
+                </g>
+                <g transform="matrix(1.01 0 0 1.01 362.9 210.9)">
+                    <circle style="stroke: rgb(0,0,0); stroke-width: 0; fill: rgb(255,255,255);" cx="0" cy="0" r="40"></circle>
+                </g>
+                <g transform="matrix(0.92 0 0 0.92 318.5 286.5)">
+                    <circle style="stroke: rgb(0,0,0); stroke-width: 0; fill: rgb(255,255,255);" cx="0" cy="0" r="40"></circle>
+                </g>
+                <g transform="matrix(0.16 -0.12 0.49 0.66 290.57 243.57)">
+                    <polygon style="stroke: rgb(0,0,0); stroke-width: 0; fill: rgb(255,255,255);" points="-50,-50 -50,50 50,50 50,-50"></polygon>
+                </g>
+                <g transform="matrix(0.16 0.1 -0.44 0.69 342.03 248.34)">
+                    <polygon style="stroke: rgb(0,0,0); stroke-width: 0; fill: rgb(255,255,255);" points="-50,-50 -50,50 50,50 50,-50"></polygon>
+                </g>
+            </svg>
+        </div>
+        
+        <form id="signupForm" onsubmit="return validateForm()">
+            <div class="input-section">
+                <label for="email">Email Address</label>
+                <div class="sec-2">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" name="email" placeholder="Username@gmail.com" required>
+                </div>
+            </div>
+            
+            <div class="input-section">
+                <label for="role">Role</label>
+                <div class="sec-2">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <select name="role" id="roleSelect" required>
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Student-specific fields -->
+            <div class="input-section role-specific-fields" id="studentFields" style="display:none;">
+                <label for="studentId">Student ID</label>
+                <div class="sec-2">
+                    <input type="text" name="studentId" placeholder="Enter your Student ID">
+                </div>
+                <label for="course">Course</label>
+                <div class="sec-2">
+                    <input type="text" name="course" placeholder="Enter your Course">
+                </div>
+            </div>
+
+            <!-- Teacher-specific fields -->
+            <div class="input-section role-specific-fields" id="teacherFields" style="display:none;">
+                <label for="teacherId">Teacher ID</label>
+                <div class="sec-2">
+                    <input type="text" name="teacherId" placeholder="Enter your Teacher ID">
+                </div>
+                <label for="subject">Subject</label>
+                <div class="sec-2">
+                    <input type="text" name="subject" placeholder="Enter the Subject you teach">
+                </div>
+            </div>
+
+            <div class="input-section">
+                <label for="password">Password</label>
+                <div class="sec-2">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input class="pas" type="password" name="password" placeholder="············" required>
+                </div>
+            </div>
+            
+            <div class="input-section">
+                <label for="confirm-password">Confirm Password</label>
+                <div class="sec-2">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input class="pas" type="password" name="confirm-password" placeholder="············" required>
+                </div>
+            </div>
+
+            <button type="submit" class="login">Sign Up</button>
+        </form>
+        
+        <div class="footer">
+            <span><a href="login.html">Already have an account? Login</a></span>
+        </div>
+    </div>
+
+    <script>
+        const roleSelect = document.getElementById('roleSelect');
+        const studentFields = document.getElementById('studentFields');
+        const teacherFields = document.getElementById('teacherFields');
+
+        roleSelect.addEventListener('change', function() {
+            const selectedRole = roleSelect.value;
+
+            // Show/Hide fields based on role selection
+            if (selectedRole === 'student') {
+                studentFields.style.display = 'block';
+                teacherFields.style.display = 'none';
+            } else if (selectedRole === 'teacher') {
+                teacherFields.style.display = 'block';
+                studentFields.style.display = 'none';
+            }
+        });
+
+        function validateForm() {
+            const password = document.querySelector('input[name="password"]').value;
+            const confirmPassword = document.querySelector('input[name="confirm-password"]').value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission if validation passes
+        }
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

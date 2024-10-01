@@ -1,0 +1,63 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #7b5da2, #16407a); /* Light gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    max-width: 500px; /* Limit container width */
+    width: 90%; /* Responsive width */
+    padding: 30px;
+    background: linear-gradient(to top right, #ffffff, #f9f9f9); /* Subtle gradient for container */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    text-align: center; /* Center text */
+}
+
+/* Header styles */
+h1 {
+    color: #495057; /* Dark text color */
+    margin-bottom: 30px; /* Space below title */
+    font-size: 2rem; /* Responsive font size */
+}
+
+/* Button styles */
+.home-button {
+    display: inline-block; /* Inline block for proper spacing */
+    background: linear-gradient(to right, #007BFF, #0056b3); /* Gradient for button */
+    color: white; /* White text */
+    padding: 12px 24px; /* Padding for button */
+    border-radius: 6px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2rem; /* Larger font size */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+/* Button hover effects */
+.home-button:hover {
+    background: linear-gradient(to right, #0056b3, #003d80); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px; /* Adjust padding on small screens */
+        margin: 50px 20px; /* Space around container */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Smaller font size on small screens */
+    }
+
+    .home-button {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Smaller font size for button */
+    }
+}

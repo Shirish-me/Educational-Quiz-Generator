@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #381d53b6, #071c40); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.container {
+    max-width: 400px;
+    width: 100%; /* Full width on small screens */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}
+
+h1 {
+    text-align: center;
+    color: #495057;
+    margin-bottom: 20px;
+    font-size: 28px; /* Increased font size for title */
+}
+
+label {
+    font-weight: bold;
+    color: #343a40;
+    display: block;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 14px 12px; /* More padding for comfort */
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 8px; /* Slightly more rounded */
+    background-color: #f8f9fa; /* Light background for the select */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus {
+    border-color: #007BFF; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Soft blue glow */
+}
+
+input[type="submit"] {
+    background-color: #007BFF; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 14px 24px; /* More padding for comfort */
+    border-radius: 8px; /* Rounded corners for buttons */
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%; /* Full width for button */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}

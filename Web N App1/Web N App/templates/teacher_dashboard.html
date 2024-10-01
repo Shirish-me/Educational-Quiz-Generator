@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="/static/teacher_dashboard.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="300" height="300" viewBox="0 0 640 480" xml:space="preserve">
+                <g transform="matrix(3.31 0 0 3.31 320.4 240.4)">
+                    <circle style="stroke: rgb(0,0,0); stroke-width: 0; fill: rgb(61,71,133);" cx="0" cy="0" r="40"></circle>
+                </g>
+                <g transform="matrix(0.98 0 0 0.98 268.7 213.7)">
+                    <circle style="stroke: rgb(0,0,0); stroke-width: 0; fill: rgb(255,255,255);" cx="0" cy="0" r="40"></circle>
+                </g>
+                <g transform="matrix(1.01 0 0 1.01 362.9 210.9)">
+                    <circle style="stroke: rgb(0,0,0); stroke-width: 0; fill: rgb(255,255,255);" cx="0" cy="0" r="40"></circle>
+                </g>
+                <g transform="matrix(0.92 0 0 0.92 318.5 286.5)">
+                    <circle style="stroke: rgb(0,0,0); stroke-width: 0; fill: rgb(255,255,255);" cx="0" cy="0" r="40"></circle>
+                </g>
+                <g transform="matrix(0.16 -0.12 0.49 0.66 290.57 243.57)">
+                    <polygon style="stroke: rgb(0,0,0); stroke-width: 0; fill: rgb(255,255,255);" points="-50,-50 -50,50 50,50 50,-50"></polygon>
+                </g>
+                <g transform="matrix(0.16 0.1 -0.44 0.69 342.03 248.34)">
+                    <polygon style="stroke: rgb(0,0,0); stroke-width: 0; fill: rgb(255,255,255);" points="-50,-50 -50,50 50,50 50,-50"></polygon>
+                </g>
+            </svg>
+        </div>
+        <h1>Teacher Dashboard</h1>
+        <a href="{{ url_for('create_quiz') }}" class="btn">Create Quiz</a>
+        <a href="{{ url_for('generate_mcq_view') }}" class="btn">Generate MCQs</a>
+    
+        <a href="{{ url_for('take_quiz') }}" class="btn">Take Quiz</a>
+        <a href="{{ url_for('attendance', quiz_id='some_quiz_id') }}" class="btn">Show Attendance</a>
+        <a href="{{ url_for('index') }}" class="btn">Back</a>
+    </div>
+</body>
+</html>
